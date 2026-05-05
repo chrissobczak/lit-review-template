@@ -1,0 +1,5 @@
+#!/bin/sh
+case "$1" in
+	*"doi.org"*) curl -LH "Accept: application/x-bibtex" $1;;
+	*) curl -LH "Accept: application/x-bibtex" "https://doi.org/$1";;
+esac

@@ -1,0 +1,46 @@
+---
+title: "TEMPLATE_FIELD"
+author: "TEMPLATE_FIELD"
+date: "`r format(Sys.time(), '%d %B %Y - %H:%M')`"
+output:
+  pdf_document:
+    toc: false
+    number_sections: true
+    fig_caption: yes
+    highlight: "zenburn"
+    extra_dependencies: ['float','multicol']
+bibliography: references.bib
+link-citations: true
+header-includes:
+  - \usepackage{etoolbox}
+  - \AtEndPreamble{\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=red}}
+editor_options:
+  markdown:
+    wrap: 72
+---
+
+\tableofcontents
+\newpage
+
+<!-- If you have a number of topics, subdivide them in sections and organize papers under them -->
+# Topic one
+
+## Paper one [@Shin_2014]
+
+## Paper two [@Suhre_2011]
+
+# Topic two
+
+\newpage
+
+<!-- Add youtube channels and databse links here -->
+# Online resources
+
+\newpage
+
+<!-- For listing and defining new vocabulary -->
+# Glossary
+
+\newpage
+
+# References
