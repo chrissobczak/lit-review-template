@@ -13,8 +13,6 @@ They are meant to make reading, taking notes and keep track of your studies easy
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
 * use the scripts in `scripts/` to render the markdown files to pdf
 ```
 ./scripts/rmd2pdf lit-review-template.rmd
