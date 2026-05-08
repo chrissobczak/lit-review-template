@@ -1,4 +1,6 @@
 ---
+project:
+  output-dir: render-files
 title: "TITLE"
 author: "AUTHOR"
 date: now

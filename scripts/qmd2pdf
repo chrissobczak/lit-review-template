@@ -1,2 +1,2 @@
 #!/bin/sh
-quarto render "$1"
+quarto render "$1" --execute-dir render-files
