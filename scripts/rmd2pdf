@@ -1,2 +1,4 @@
 #!/bin/sh
 Rscript -e "rmarkdown::render('$1')"
+mkdir -p render-files
+mv *{.acn,.acr,.alg,.glg,.glo,.gls,.glsdefs,.ist} render-files/ 2>/dev/null

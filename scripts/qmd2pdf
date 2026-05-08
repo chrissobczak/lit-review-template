@@ -1,2 +1,4 @@
 #!/bin/sh
-quarto render "$1" --execute-dir render-files
+quarto render $1
+mkdir -p render-files
+mv *{.acn,.acr,.alg,.glg,.glo,.gls,.glsdefs,.ist} render-files/ 2>/dev/null
