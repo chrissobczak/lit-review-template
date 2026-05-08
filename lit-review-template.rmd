@@ -1,9 +1,9 @@
 ---
-title: "TEMPLATE_FIELD"
-author: "TEMPLATE_FIELD"
-date: "`r format(Sys.time(), '%d %B %Y - %H:%M')`"
+title: "TITLE"
+author: "AUTHOR"
+date: "`r format(Sys.time(), '%B %d %Y')`"
 output:
-  pdf_document:
+  bookdown::pdf_document2:
     toc: false
     number_sections: true
     fig_caption: yes
@@ -11,9 +11,15 @@ output:
     extra_dependencies: ['float','multicol']
 bibliography: references.bib
 link-citations: true
+colorlinks: true
+linkcolor: purple
+urlcolor: blue
+citecolor: red
 header-includes:
   - \usepackage{etoolbox}
-  - \AtEndPreamble{\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=red}}
+  - \usepackage[colorlinks=true,linkcolor=purple]{hyperref}
+  - \usepackage[toc,acronym,automake]{glossaries}
+  - \makeglossaries
 editor_options:
   markdown:
     wrap: 72
@@ -27,7 +33,16 @@ editor_options:
 
 ## Paper one [@Shin_2014]
 
-## Paper two [@Suhre_2011]
+\newglossaryentry{mr}{
+	name={Mendelian randomization},
+	description={Using genetic variants as instruments to infer causal effects}
+}
+
+\newacronym{gdm}{GDM}{Genetically Determined Metabotype}
+
+Here is an example of learning new vocabilary such as \gls{mr} and defining it in the glossary.
+
+## Short title of paper [@Suhre_2011]
 
 # Topic two
 
@@ -35,11 +50,12 @@ editor_options:
 
 <!-- Add youtube channels and databse links here -->
 # Online resources
+- [Human Metabolome Database](https://www.hmdb.ca/)
 
 \newpage
 
-<!-- For listing and defining new vocabulary -->
-# Glossary
+<!-- For listing and defining new vocabulary, done automatically -->
+\printglossaries
 
 \newpage
 
