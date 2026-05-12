@@ -1,4 +1,6 @@
 #!/bin/sh
 quarto render $1
-mkdir -p render-files
-mv *{.acn,.acr,.alg,.glg,.glo,.gls,.glsdefs,.ist} render-files/ 2>/dev/null
+if ls *{.acn,.acr,.alg,.glg,.glo,.gls,.glsdefs,.ist} >/dev/null 2>$1; then
+	mkdir -p render-files
+	mv *{.acn,.acr,.alg,.glg,.glo,.gls,.glsdefs,.ist} render-files/ 2>/dev/null
+fi
