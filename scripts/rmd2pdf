@@ -1,6 +1,6 @@
 #!/bin/sh
+set -e
 Rscript -e "rmarkdown::render('$1')"
-
 for f in *.acn *.acr *.alg *.glg *.glo *.gls *.glsdefs *.ist *.tex; do
 	if [ -e "$f" ]; then
 		mkdir -p render-files
